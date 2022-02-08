@@ -6,6 +6,8 @@ namespace CarLotSimulator
 {
     public class Car
     {
+
+        public static int CarsInLot { get; set; }
         public static void MakeEngineNoise(string noise)
         {
             Console.WriteLine(noise);
@@ -18,7 +20,7 @@ namespace CarLotSimulator
         
         public Car()
         {
-
+            CarsInLot++;
         }
 
         public Car(string make, string model, int year, bool isDriveable, string engineNoise, string honkNoise)
@@ -29,6 +31,7 @@ namespace CarLotSimulator
             IsDriveable = isDriveable;
             EngineNoise = engineNoise;
             HonkNoise = honkNoise;
+            CarsInLot++;
         }
         
         public string Make { get; set; }
